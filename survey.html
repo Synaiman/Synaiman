@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khảo sát mức độ căng thẳng cá nhân</title>
+  <style>
+    body {
+      font-family: sans-serif, serif;
+      background: #f4f9ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      line-height: 1.4;
+    }
+  
+    .survey-box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 700px;
+    }
+  
+    .survey-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000000;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  
+    label {
+      font-weight: bold;
+      color: #4b4a4a;
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 24px; 
+    }
+  
+    .radio-group .checkbox-group {
+  margin-bottom: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+    }
+  
+    input  select   textarea {
+      font-family: sans-serif, serif;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+  
+    .survey-box input[type="radio"],
+    .survey-box input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+  
+    .survey-box button {
+      background-color: #4acfee;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+  
+    .survey-box button:hover {
+      background-color: #3db7dc;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="survey-box">
+    <h2>Khảo sát mức độ căng thẳng cá nhân</h2>
+    <form id="surveyForm">
+    <label style="color: #000000; font-weight: bold;">1. Giới tính</label>
+      <div class="radio-group" style="display: flex; gap: 30px; align-items: center; margin-top: 4px; margin-bottom: 16px;">
+        <label style="display: flex; align-items: center;">
+          <input type="radio" name="gender" value="Nam" required> Nam
+        </label>
+        <label style="display: flex; align-items: center;">
+          <input type="radio" name="gender" value="Nữ"> Nữ
+        </label>
+        <label style="display: flex; align-items: center;">
+          <input type="radio" name="gender" value="Khác"> Khác
+        </label>
+      </div>
+      
+
+      <label style="color: #000000; font-weight: bold;">2. Độ tuổi</label>
+      <div class="radio-group" style="display: flex; flex-direction: column; gap: 3px;">
+        <label style="margin: 0;"><input type="radio" name="age" value="Dưới 18" required> Dưới 18</label>
+        <label style="margin: 0;"><input type="radio" name="age" value="18 – 25"> 18 – 25</label>
+        <label style="margin: 0;"><input type="radio" name="age" value="26 – 35"> 26 – 35</label>
+        <label style="margin: 0;"><input type="radio" name="age" value="Trên 35"> Trên 35</label>
+      </div>
+      <label style="color: #000000; font-weight: bold;">3. Việc làm</label>
+      <select name="occupation" required>
+        <option value="">-- Chọn việc làm --</option>
+        <option value="Học sinh, sinh viên">Học sinh, sinh viên</option>
+        <option value="Nghề nghiệp tự do">Đang đi làm</option>
+        <option value="Mục khác">Mục khác</option>
+      </select>
+
+      <label style="color: #000000; font-weight: bold;">4. Những yếu tố khiến bạn căng thẳng nhất</label>
+     
+<div class="checkbox-group" style="display: flex; flex-direction: column; gap: 3px;">
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Áp lực công việc"> Áp lực công việc</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Học tập / Thi cử"> Học tập / Thi cử</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Tài chính / Kinh tế"> Tài chính / Kinh tế</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Mối quan hệ xã hội"> Mối quan hệ xã hội</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Thiếu thời gian nghỉ ngơi"> Thiếu thời gian nghỉ ngơi</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Sức khỏe / Bệnh tật"> Sức khỏe / Bệnh tật</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Quá khứ"> Vấn đề quá khứ</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Vấn đề gia đình"> Vấn đề gia đình</label>
+  <label style="margin: 0;"><input type="checkbox" name="stress_factors" value="Mục khác"> Mục khác</label>
+</div>
+
+
+      <label style="color: #000000; font-weight: bold;">5. Bạn thường cảm thấy căng thẳng vào thời điểm nào trong ngày?</label>
+      <select name="stress_time" required>
+        <option value="">-- Chọn thời điểm --</option>
+        <option value="Buổi sáng">Buổi sáng</option>
+        <option value="Buổi trưa">Buổi trưa</option>
+        <option value="Buổi chiều">Buổi chiều</option>
+        <option value="Buổi tối">Buổi tối</option>
+        <option value="Không cố định">Không cố định</option>
+      </select>
+
+      <label style="color: #000000; font-weight: bold;">6. Triệu chứng khi căng thẳng (chọn nhiều)</label>
+      <div class="checkbox-group" style="display: flex; flex-direction: column; gap: 3px;">
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Đau đầu, tim đập nhanh"> Đau đầu, tim đập nhanh</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Đói bụng"> Khóc/buồn bã</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Mất ngủ"> Mất ngủ</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Mệt mỏi"> Mệt mỏi</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Khó tập trung"> Khó tập trung</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Cáu gắt"> Cáu gắt</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Ra mồ hôi tay"> Ra mồ hôi tay</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Thay đổi cảm xúc đột ngột"> Thay đổi cảm xúc đột ngột</label>
+        <label style="margin: 0;"><input type="checkbox" name="symptoms" value="Không có biểu hiện rõ ràng"> Không có biểu hiện rõ ràng</label>
+      </div>
+      
+
+      <label style="color: #000000; font-weight: bold;">7. Bạn thường làm gì khi căng thẳng? (chọn tối đa 3)</label>
+      <div class="checkbox-group" style="display: flex; flex-direction: column; gap: 3px;">
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Nghe nhạc"> Nghe nhạc</label>
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Tập thể dục"> Tập thể dục</label>
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Ngủ nghỉ"> Ngủ nghỉ</label>
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Tâm sự"> Tâm sự</label>
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Ăn uống"> Ăn uống</label>
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Giải trí"> Giải trí</label>
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Thiền, yoga"> Thiền, yoga</label>
+        <label style="margin: 0;"><input type="checkbox" name="coping_methods" value="Không làm gì cả"> Không làm gì cả</label>
+      </div>
+
+      <button type="submit">Gửi khảo sát</button>
+    </form>
+  </div>
+  <script type="module">
+    // Import các module Firebase cần thiết
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+    import { getFirestore, setDoc, doc, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+  
+    // Cấu hình Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCoZj4ObEj9p5UxXAsyZAZTbEURbdG6fyQ",
+      authDomain: "synaiman-dc66a.firebaseapp.com",
+      projectId: "synaiman-dc66a",
+      storageBucket: "synaiman-dc66a.firebasestorage.app",
+      messagingSenderId: "748144153270",
+      appId: "1:748144153270:web:8fa284715dd3c2f7654c17",
+      measurementId: "G-EMNTD4F7W2"
+    };
+  
+    // Khởi tạo Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+  
+    // Xử lý form submit
+    document.getElementById("surveyForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+  
+      // Lấy giá trị từ form
+      const gender = document.querySelector('input[name="gender"]:checked')?.value || "";
+      const age = document.querySelector('input[name="age"]:checked')?.value || "";
+      const occupation = document.querySelector('select[name="occupation"]').value;
+      const stressTime = document.querySelector('select[name="stress_time"]').value;
+  
+      const stressFactors = Array.from(document.querySelectorAll('input[name="stress_factors"]:checked')).map(el => el.value);
+      const symptoms = Array.from(document.querySelectorAll('input[name="symptoms"]:checked')).map(el => el.value);
+      const copingMethods = Array.from(document.querySelectorAll('input[name="coping_methods"]:checked')).map(el => el.value);
+  
+      // Tạo object dữ liệu để lưu
+      const surveyData = {
+        gender,
+        age,
+        occupation,
+        stressFactors,
+        stressTime,
+        symptoms,
+        copingMethods,
+        timestamp: new Date().toISOString()
+      };
+  
+      try {
+        // Gửi dữ liệu lên Firestore (bảng tên "stress_surveys")
+        await addDoc(collection(db, "stress_surveys"), surveyData);
+        alert("Cảm ơn bạn đã hoàn thành khảo sát!");
+        window.location.href = "account.html";
+     } catch (error) {
+  console.error("Lỗi khi gửi dữ liệu:", error);
+  alert("Đã xảy ra lỗi khi gửi khảo sát. Vui lòng thử lại.");
+}
+      }
+    );
+  </script>
+  
+</body>
+</html>

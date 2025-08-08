@@ -1,0 +1,138 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  :root {
+    /* Colors */
+    --white-colour: #fff;
+    --primary-colour: #003399;
+    --powder-blue: #103667;
+    --secondary-blue: #1E90FF;
+    --LightSky-blue: #87CEFA;
+    --Third-blue: #0075c7;
+  
+    /* Font sizes */
+    --font-rem-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-1: 2rem;
+    --font-size-x1: 2rem;
+    --font-size-xx1: 2.3rem;
+  
+    /* Font weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+  
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+  
+    /* Layout */
+    --site-max-width: 1300px;
+  }
+  
+  /* Reset styles */
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  /* Section layout */
+  .section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+  }
+  
+  /* Header / Navbar */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    background: var(--powder-blue);
+    
+  }
+  
+  header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  
+  .navbar .nav-logo .logo-text {
+      color: var(--white-colour);
+      font-size: 2.0rem; 
+      font-weight: 600;
+  }
+  
+  
+  .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      color: #2E74E6; 
+  }
+  .nav-logo {
+          position: relative;
+      }
+  
+      
+
+  
+  .navbar .nav-menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar .nav-menu .nav-link {
+    position: relative;
+    padding: 8px 16px;
+    color: var(--white-colour);
+    font-size: 1.2rem;
+    border-radius: var(--border-radius-m);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* chỉnh khoảng cách giữa biểu tượng và gạch chân */
+    width: 0;
+    height: 2px;
+    background-color: var(--white-colour);
+    transition: width 0.3s ease;
+  }
+  
+  .navbar .nav-menu .nav-link:hover::after {
+    width: 100%;
+  }
+  
